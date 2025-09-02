@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: steam-it-foundation
+    env: static
+    buildCommand: python build.py
+    staticPublishPath: ./build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

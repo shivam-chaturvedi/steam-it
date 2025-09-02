@@ -1,0 +1,17 @@
+{
+  "name": "steam-it-foundation-website",
+  "version": "1.0.0",
+  "description": "STEAM IT Foundation Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "python build.py",
+    "start": "python -m http.server 3000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": ["steam", "education", "foundation", "website"],
+  "author": "STEAM IT Foundation",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
