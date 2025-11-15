@@ -16,9 +16,11 @@ def create_build():
     # Copy index.html
     shutil.copy2('index.html', build_dir / 'index.html')
     
-    # Copy images directory
-    if Path('images').exists():
-        shutil.copytree('images', build_dir / 'images')
+    # Copy asset directories if they exist
+    asset_dirs = ['images', 'new_images', 'pdfs']
+    for asset_dir in asset_dirs:
+        if Path(asset_dir).exists():
+            shutil.copytree(asset_dir, build_dir / asset_dir)
     
     # Create _redirects file for Render
     with open(build_dir / '_redirects', 'w') as f:
